@@ -128,3 +128,7 @@ recognition.onnomatch = function (event) {
 recognition.onerror = function (event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
 }
+
+//TEST STATUS: PASS
+//The code works...
+///but can we understand *how* it works, and successfully integrate it?
