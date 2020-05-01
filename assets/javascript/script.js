@@ -1,7 +1,7 @@
 //API Test 1
 //Analyzing some text with TextRazor
 
-//API key: 9e38cdddb8baaef247045e80794aed4c913c1ef8538539bd05fb3de8
+//API key: (redacted after test)
 //pls no steal
 
 //textrazor url: https://api.textrazor.com
@@ -18,7 +18,9 @@ $.ajax({
             //process the JSON data etc
         }
 })
-*/
+*/ //reference code do not uncommment
+
+// testing code - add your API key to use
 
 // $.ajax({
 //   type: "POST",
@@ -27,7 +29,7 @@ $.ajax({
 //     text: 'The rain in Spain falls mainly on the plain.'
 //   },
 //   beforeSend: function (xhr) {
-//     xhr.setRequestHeader("x-textrazor-key", "9e38cdddb8baaef247045e80794aed4c913c1ef8538539bd05fb3de8")
+//     xhr.setRequestHeader("x-textrazor-key", "your-API-key")
 //   }, success: function (data) {
 //     alert(data);
 //     //process the JSON data etc
@@ -38,3 +40,5 @@ $.ajax({
 
 //API Test 2:
 //Sentiment analyzing some text with ParallelDots
+
+//API key: 2UKOrCNzK8621TicKvum4P5XOmEqPm4hVdJ4NZIt4r8
