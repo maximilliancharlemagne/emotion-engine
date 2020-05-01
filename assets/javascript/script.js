@@ -36,9 +36,29 @@ $.ajax({
 //   }
 // })
 
+//TEST STATUS: FAIL
 //returns a CORS error (-_-｡)
 
 //API Test 2:
 //Sentiment analyzing some text with ParallelDots
 
 //API key: 2UKOrCNzK8621TicKvum4P5XOmEqPm4hVdJ4NZIt4r8
+
+let dataObject = {
+  api_key: '2UKOrCNzK8621TicKvum4P5XOmEqPm4hVdJ4NZIt4r8',
+  lang_code: 'en',
+  text: `I REALLY HATE MEGADETH'S NEW ALBUM!`
+}
+
+$.ajax({
+  type: "POST",
+  url: 'https://apis.paralleldots.com/v4/sentiment',
+  data: dataObject, 
+  success: function (data) {
+    console.log(data);
+    //process the JSON data etc
+  }
+})
+
+//TEST STATUS: PASS
+//Returns a sentiment object!
