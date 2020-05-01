@@ -1,5 +1,5 @@
 # emotion-engine
-Takes in text, analyzes the emotions in the text, and reports them to the user. (Speech-to-text is a reach goal).
+Takes in speech, converts it to text, analyzes the emotions in the text, and reports them to the user.
 
 # Control Flow Diagram:
 ![control flow diagram](./assets/images/controlFlow_v3.PNG)
