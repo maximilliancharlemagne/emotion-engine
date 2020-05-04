@@ -32,6 +32,7 @@ $('#startBtn').click( ()=>{
   //start the speech recognition
   recognition.start();
   console.log('Starting recognition')
+  resultString = ''
 }
 )
 
@@ -51,6 +52,8 @@ $('#resetBtn').click(() => {
   recognition.stop()
   //clear resultString
   resultString = ''
+  $('#submitBtn').addClass('disabled')
+  i = 0
 }
 )
 
@@ -58,15 +61,21 @@ $('#resetBtn').click(() => {
 //submit button
 //make an event listener that listens for resetBtn
 $('#submitBtn').click(() => {
-  //stop the speech recognition
-  recognition.stop()
-  //call textAnalyzer from textEngine on resultString
-  textAnalyzer(resultString)
-}
+  if(resultString){ //if resultString is not empty
+    //stop the speech recognition
+    recognition.stop()
+    //call textAnalyzer from textEngine on resultString
+    textAnalyzer(resultString)
+    resultString = ''
+    i = 0
+  }
+  }
+  
 )
 
 //fired once a successful result is received
 recognition.onresult = function (event) {
+  $('#submitBtn').removeClass('disabled')
   console.log(event)
   newResult = event.results[i][0].transcript;
   i++

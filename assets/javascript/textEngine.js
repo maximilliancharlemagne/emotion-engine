@@ -2,11 +2,15 @@
 //might want to break up analysis and display?
 
 function textAnalyzer(stringToAnalyze){
+  console.log(`text analyzer called with arg: ${stringToAnalyze}`)
+
   let dataObject = {
   api_key: '2UKOrCNzK8621TicKvum4P5XOmEqPm4hVdJ4NZIt4r8',
   lang_code: 'en',
   text: stringToAnalyze
   }
+
+  console.log(dataObject)
 
   $.ajax({
     type: "POST",
