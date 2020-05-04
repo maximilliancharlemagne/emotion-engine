@@ -45,12 +45,25 @@ $('#pauseBtn').click( () => {
 )
 
 //reset button
-//stop recognition
-//clear resultString
+//make an event listener that listens for resetBtn
+$('#resetBtn').click(() => {
+  //stop the speech recognition
+  recognition.stop()
+  //clear resultString
+  resultString = ''
+}
+)
+
 
 //submit button
-//stop recognition
-//call textAnalyzer from textEngine on resultString
+//make an event listener that listens for resetBtn
+$('#submitBtn').click(() => {
+  //stop the speech recognition
+  recognition.stop()
+  //call textAnalyzer from textEngine on resultString
+  textAnalyzer(resultString)
+}
+)
 
 //fired once a successful result is received
 recognition.onresult = function (event) {
