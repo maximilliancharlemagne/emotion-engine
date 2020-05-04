@@ -4,13 +4,13 @@
 let resultString = '' //need to convert this to stringToAnalyze once we finish
 
 //enables ability for mobile and desktop // feeds objects to Chrome
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+let SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+let SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+let SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
 //makes local copy for us to use
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
+let recognition = new SpeechRecognition();
+let speechRecognitionList = new SpeechGrammarList();
 
 //add our grammar to the recognition - will this work with an empty list?
 recognition.grammars = speechRecognitionList;
@@ -23,39 +23,36 @@ recognition.lang = 'en-US';
 recognition.interimResults = false;
 //Sets the number of alternative potential matches that should be returned per result
 recognition.maxAlternatives = 1;
-//start button function
-document.body.onclick = function() {
-  recognition.start();
-  console.log('Ready to receive a color command.');
-}
-//fired once a successful result is received
-recognition.onresult = function(event) {
-    var color = event.results[0][0].transcript;
-    diagnostic.textContent = 'Result received: ' + color + '.';
-    bg.style.backgroundColor = color;
-    console.log('Confidence: ' + event.results[0][0].confidence);
-  }
-//check out documentation on why burnt wheat was not flagged
-  recognition.onnomatch = function(event) {
-    diagnostic.textContent = 'I didnt recognise that color.';
-  }
-//handles cases where there is an actual error with the recognition successfully
-  recognition.onerror = function(event) {
-    diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-  }
-  //stop the speech recognition service from running
-  //for submit and reset buttons
-  SpeechRecognition.stop()
 
 //start button
 //make an event listener that listens for startBtn
+$('#startBtn').click(
+  //start the speech recognition
+  recognition.start();
+  console.log('Starting recognition')
+)
 
-//start the speech recognition
 
 //stop button
 //make an event listener that listens for stopBtn
+$('#stopBtn').click(
+  //stop the speech recognition
+  SpeechRecognition.stop()
+)
 
-//stop the speech recognition
+//fired once a successful result is received
+recognition.onresult = function (event) {
+  var newResult = event.results[0][0].transcript;
+  resultString += newResult
+  console.log('Confidence: ' + event.results[0][0].confidence);
+  console.log('New result string: ' + resultString)
+}
 
-//When we get a result
-
+//check out documentation on why burnt wheat was not flagged
+recognition.onnomatch = function (event) {
+  console.log('I didnt recognise that word.')
+}
+//handles cases where there is an actual error with the recognition successfully
+recognition.onerror = function (event) {
+  console.log('Error occurred in recognition: ' + event.error)
+}
