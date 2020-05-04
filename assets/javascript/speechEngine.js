@@ -2,6 +2,8 @@
 
 //Create global variables
 let resultString = '' //need to convert this to stringToAnalyze once we finish
+let newResult
+let i = 0
 
 //enables ability for mobile and desktop // feeds objects to Chrome
 let SpeechRecognition = webkitSpeechRecognition
@@ -38,16 +40,19 @@ $('#startBtn').click( ()=>{
 //make an event listener that listens for stopBtn
 $('#pauseBtn').click( () => {
   //stop the speech recognition
-  SpeechRecognition.stop()
+  recognition.stop()
 }
 )
 
 //fired once a successful result is received
 recognition.onresult = function (event) {
-  var newResult = event.results[0][0].transcript;
-  resultString += newResult
+  console.log(event)
+  newResult = event.results[i][0].transcript;
+  i++
+  console.log(`New result: ${newResult}`)
+  resultString = resultString+newResult
   console.log('Confidence: ' + event.results[0][0].confidence);
-  console.log('New result string: ' + resultString)
+  console.log('New overall results: ' + resultString)
 }
 
 //check out documentation on why burnt wheat was not flagged
