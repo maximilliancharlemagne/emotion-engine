@@ -4,9 +4,9 @@
 let resultString = '' //need to convert this to stringToAnalyze once we finish
 
 //enables ability for mobile and desktop // feeds objects to Chrome
-let SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-let SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-let SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+let SpeechRecognition = webkitSpeechRecognition
+let SpeechGrammarList = webkitSpeechGrammarList
+let SpeechRecognitionEvent = webkitSpeechRecognitionEvent
 
 //makes local copy for us to use
 let recognition = new SpeechRecognition();
