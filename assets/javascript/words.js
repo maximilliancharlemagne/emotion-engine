@@ -1,0 +1,1 @@
+//array for ALL THE WORDS
