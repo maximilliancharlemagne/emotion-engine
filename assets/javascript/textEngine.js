@@ -25,5 +25,10 @@ function textAnalyzer(stringToAnalyze){
 }
 
 function textDisplayer(anEmotionObject){
-  
+  $('#happyBar').attr('style',`width: ${Math.floor(anEmotionObject.happy*100)}%`)
+  $('#angryBar').attr('style', `width: ${Math.floor(anEmotionObject.angry * 100)}%`)
+  $('#excitedBar').attr('style', `width: ${Math.floor(anEmotionObject.excited * 100)}%`)
+  $('#sadBar').attr('style',`width: ${Math.floor(anEmotionObject.sad*100)}%`)
+  $('#fearBar').attr('style',`width: ${Math.floor(anEmotionObject.fear*100)}%`)
+  $('#boredBar').attr('style',`width: ${Math.floor(anEmotionObject.indifferent*100)}%`)
 }
