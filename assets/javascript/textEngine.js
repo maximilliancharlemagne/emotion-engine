@@ -18,7 +18,12 @@ function textAnalyzer(stringToAnalyze){
     data: dataObject, 
     success: function (data) {
       console.log(data);
+      textDisplayer(data)
       //process the JSON data etc
     }
   })
+}
+
+function textDisplayer(anEmotionObject){
+  
 }
