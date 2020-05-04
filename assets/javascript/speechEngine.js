@@ -1,7 +1,7 @@
 // Speech to text code goes here
 
 //Create global variables
-let resultString = '' //need to convert this to stringToAnalyze once we finish
+let resultString = '' //will be passed to textAnalyze function in the textEngine file
 let newResult
 let i = 0
 
@@ -43,6 +43,14 @@ $('#pauseBtn').click( () => {
   recognition.stop()
 }
 )
+
+//reset button
+//stop recognition
+//clear resultString
+
+//submit button
+//stop recognition
+//call textAnalyzer from textEngine on resultString
 
 //fired once a successful result is received
 recognition.onresult = function (event) {
