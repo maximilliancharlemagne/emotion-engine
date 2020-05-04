@@ -1,27 +1,25 @@
 // Speech to text code goes here
 
+//Create global variables
+let resultString = '' //need to convert this to stringToAnalyze once we finish
+
 //enables ability for mobile and desktop // feeds objects to Chrome
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+
 //makes local copy for us to use
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
-//replace with 10,000 word array
-var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral' ... ];
-var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
-//accepts as parameters the string we want to add, 
-//plus optionally a weight value that specifies the importance of this grammar
-speechRecognitionList.addFromString(grammar, 1);
-//speech recognition instance by setting it to the value
-recognition.grammars = speechRecognitionList;
-//Controls whether continuous results are captured
 
-//can we pass results continuously? Must test
-recognition.continuous = false;
+//add our grammar to the recognition - will this work with an empty list?
+recognition.grammars = speechRecognitionList;
+
+//Controls whether continuous results are captured
+recognition.continuous = true;
 //in english
 recognition.lang = 'en-US';
-//Defines whether the speech recognition system should return interim results, or just final results.
+//Defines whether the speech recognition system should return interim results, or just final results. Does it have to be true for continuous results?
 recognition.interimResults = false;
 //Sets the number of alternative potential matches that should be returned per result
 recognition.maxAlternatives = 1;
@@ -48,3 +46,16 @@ recognition.onresult = function(event) {
   //stop the speech recognition service from running
   //for submit and reset buttons
   SpeechRecognition.stop()
+
+//start button
+//make an event listener that listens for startBtn
+
+//start the speech recognition
+
+//stop button
+//make an event listener that listens for stopBtn
+
+//stop the speech recognition
+
+//When we get a result
+
