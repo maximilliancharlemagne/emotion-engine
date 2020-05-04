@@ -26,18 +26,20 @@ recognition.maxAlternatives = 1;
 
 //start button
 //make an event listener that listens for startBtn
-$('#startBtn').click(
+$('#startBtn').click( ()=>{
   //start the speech recognition
   recognition.start();
   console.log('Starting recognition')
+}
 )
 
 
 //stop button
 //make an event listener that listens for stopBtn
-$('#stopBtn').click(
+$('#pauseBtn').click( () => {
   //stop the speech recognition
   SpeechRecognition.stop()
+}
 )
 
 //fired once a successful result is received
