@@ -1,13 +1,31 @@
 .appName {
-    text-decoration: underline;
-    color: black;
+    margin-top: 0px;
+    font-family:'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 75px;
+    text-shadow: 2px 2px 8px darkblue;
+    /* text-shadow: 2px 2px 8px rgba(red, green, blue, alpha); */
 }
 .heroBackground {
     color: white;
-    background: linear-gradient(#0facd4, #447ee3, #9c31fe)
+    padding: 20px;
+    background: linear-gradient(#0facd4, #447ee3, #45087e)
+}
+
+/*    background: linear-gradient(#0facd4, #447ee3, #9c31fe)*/
+.cardText {
+    text-align: left;
 }
 .funcBackground {
     background-color: lightgrey;
+    padding: 40px;
+}
+.funcTitle {
+    margin: 0px;
+}
+#progressBar {
+    margin-top: 20px;
 }
 .container {
     text-align: center;
@@ -28,8 +46,10 @@
 }
 .infoTitle {
     color: darkblue;
-    text-shadow: 2px 2px #0facd4;
 }
 .resultLabel {
     text-align: left;
+}
+body {
+    font-family: 'Roboto', sans-serif;
 }
