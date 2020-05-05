@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>InterviewEQ</title>
 </head>
 <body>
   <!-- hamburger NavBar -->
-  <nav>
+  <!-- <nav>
     <div class="nav-wrapper">
       <a href="#resultsDiv" class="brand-logo">Logo</a>
       <a href="#resultsDiv" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -26,99 +27,126 @@
     <li><a href="collapsible.html">Javascript</a></li>
     <li><a href="mobile.html">Mobile</a></li>
   </ul>
-  </nav>
+  </nav> -->
   <!-- Hero Area -->
   <div class="hero heroBackground">
     <div class="container">
     <h1 class="appName">InterviewEQ</h1>
-    <h4 class="tagLine">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus harum et eligendi nulla velit non, veniam cupiditate ipsa officia explicabo vero facere, necessitatibus numquam provident voluptatibus labore at repellat hic?</h4>
+    <h5 class="tagLine">Because interviews are about more than just your technical ability. 
+      <br>Analyze your emotions, land the job.</h5>
     <img src="" alt="">
   </div>
 </div>
   <!-- What InterviewEQ is and How It Works -->
   <div class="whatItIs container">
+    <div class="row">
     <h3 class="infoTitle">What is InterviewEQ?</h3>
-      <div class="problem col s4">
+      <div class="problem col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator imageSize" src="./assets/images/problemImage.png">
+            <img class="activator imageSize" src="./assets/images/problemImage.png" alt="pencil on paper">
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">The Problem<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">The PROBLEMS and PAIN POINTS<i class="material-icons right">&#x24E7;</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>The Problem</span>
+            <br>
+            <p class="cardText">Everyone is familiar with the term “Intelligence Quotient”. We all know that people with higher IQs are smarter, they can get more done, and particularly in the tech industry they can get better and higher paying jobs. But when it comes to hiring, companies aren’t just looking for brains. The better you can understand and get along with your co-workers, the more productive you’ll be, and the more you’ll contribute to a positive company culture. That’s why its imperative to understand and develop your “Emotional Quotient”, your EQ.</p>
           </div>
-        </div>
-      <div class="theFix col s4">
+      </div>
+    </div>
+      <div class="theFix col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator imageSize" src="./assets/images/solutionImage.png">
+            <img class="activator imageSize" src="./assets/images/solutionImage.png" alt="light bulb puzzle">
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">The Solution<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">InterviewEQ is THE SOLUTION to the PROBLEM<i class="material-icons right">&#x24E7;</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>The Solution</span>
+            <br>
+            <p class="cardText">InterviewEQ is specifically designed for web developers to prepare for the job market by analyzing the text of their mock and prep interviews and informing them of the emotions conveyed. You can be awesome at coding, but remember: people want to hire people they want to be around for 12 hours a day… so don’t be boring, sad or scared (and seriously don’t be angry). Happy & excited applicants = happy & excited hiring managers.</p>
           </div>
         </div>
-      <div class="howItWorks col s4">
+      </div>
+      <div class="howItWorks col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator imageSize" src="./assets/images/worksImage.png">
+            <img class="activator imageSize" src="./assets/images/worksImage.png" alt="box containing gear, light bulb, and heart">
           </div>
           <div class="card-content" id="contentSize">
-            <span class="card-title activator grey-text text-darken-4">How it works<i class="material-icons right">⋮</i></span>
+            <span class="card-title activator grey-text text-darken-4">How It Works<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">HOW IEQ WORKS<i class="material-icons right">&#x24E7;</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>How It Works</span>
+            <br>
+            <p class="cardText">
+              InterviewEQ works in a three-step process:Record the audio of your mock interview directly through this page. 
+              The app uses speech-to-text conversion to render the audio as a text string.
+              That text string is run through an emotion analysis engine that renders a display of prominent emotions present in the recording.
+              </p>
           </div>
         </div>
+      </div>
+    </div>
   </div>
 
   <!-- Functional Area -->
   <div class="functionalArea funcBackground">
     <div class="container">
-    <h3>Instructions Header</h3>
-      <h5>Instructions for how to operate InterviewEQ go here.</h5>
-      <button id="startBtn">Start</button>
-      <button id="pauseBtn">Pause</button>
-      <button id="resetBtn">Reset</button>
-      <button id="submitBtn" class="disabled">Submit</button>
+    <h3 class="funcTitle">Let's Get Started</h3>
+      <h5>Click Start to begin recording. Click Reset to stop without submitting. Click Submit to stop and submit for results.</h5>
+      <button id="startBtn" class="btn">Start</button>
+      <button id="pauseBtn" class="btn hide">Pause</button>
+      <button id="resetBtn" class="btn">Reset</button>
+      <button id="submitBtn" class="disabled btn">Submit</button>
+      <div class="progress hide" id="progressBar">
+        <div class="indeterminate"></div>
+      </div>
   </div>
 </div>
   <!-- Results Area -->
   <div class="resultsArea container">
     <h3 class="resultTitle">Results</h3>
-    <h5>How to interpret results description goes here.</h5>
+    <h5>Your primary emotions are displayed below.</h5>
+    <div class="preloader-wrapper big active hide" id="resultsSwirl">
+      <div class="spinner-layer spinner-blue-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
       <div id="resultsDiv">
         <!-- class="hide" -->
         <p class="resultLabel">Happy</p>
-        <div class="progress result1">
-          <div class="determinate" id="happyBar" style="width: 75%"></div>
+        <div class="progress result1 orange lighten-4">
+          <div class="determinate orange darken-3" id="happyBar" style="width: 50%"></div>
         </div>
         <p class="resultLabel">Angry</p>
-        <div class="progress result2">
-          <div class="determinate" id="angryBar" style="width: 15%"></div>
+        <div class="progress result2 red lighten-4">
+          <div class="determinate red darken-3" id="angryBar" style="width: 50%"></div>
         </div>
         <p class="resultLabel">Excited</p>
-        <div class="progress result3">
-          <div class="determinate" id="excitedBar" style="width: 10%"></div>
+        <div class="progress result3 yellow lighten-4">
+          <div class="determinate yellow darken-2" id="excitedBar" style="width: 50%"></div>
         </div>
         <p class="resultLabel">Sad</p>
-        <div class="progress result4">
-          <div class="determinate" id="sadBar" style="width: 10%"></div>
+        <div class="progress result4 blue lighten-4 lighten-4">
+          <div class="determinate blue accent-4" id="sadBar" style="width: 50%"></div>
         </div>
-        <p class="resultLabel">Fear</p>
-        <div class="progress result5">
-          <div class="determinate" id="fearBar" style="width: 10%"></div>
+        <p class="resultLabel">Fearful</p>
+        <div class="progress result5 deep-purple lighten-4">
+          <div class="determinate deep-purple darken-3" id="fearBar" style="width: 50%"></div>
         </div>
         <p class="resultLabel">Bored</p>
-        <div class="progress result6">
-          <div class="determinate" id="boredBar" style="width: 10%"></div>
+        <div class="progress result6 green lighten-4">
+          <div class="determinate green darken-4" id="boredBar" style="width: 50%"></div>
         </div>
       </div>
   </div>
