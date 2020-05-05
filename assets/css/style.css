@@ -1,1 +1,35 @@
-/* Some style goes here */
+.appName {
+    text-decoration: underline;
+    color: black;
+}
+.heroBackground {
+    color: white;
+    background: linear-gradient(#0facd4, #447ee3, #9c31fe)
+}
+.funcBackground {
+    background-color: lightgrey;
+}
+.container {
+    text-align: center;
+}
+.imageSize {
+    max-width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px;
+}
+.card-content {
+    padding: 10px !important;
+}
+.card-title {
+    font-weight: 400 !important;
+}
+.infoTitle {
+    color: darkblue;
+    text-shadow: 2px 2px #0facd4;
+}
+.resultLabel {
+    text-align: left;
+}

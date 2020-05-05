@@ -6,61 +6,132 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  
   <link rel="stylesheet" href="./assets/css/style.css">
-
   <title>InterviewEQ</title>
 </head>
 <body>
+  <!-- hamburger NavBar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#resultsDiv" class="brand-logo">Logo</a>
+      <a href="#resultsDiv" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div><ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+  </nav>
   <!-- Hero Area -->
-  <div class="hero">
+  <div class="hero heroBackground">
+    <div class="container">
     <h1 class="appName">InterviewEQ</h1>
-    <h4 class="tagLine"></h4>
+    <h4 class="tagLine">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus harum et eligendi nulla velit non, veniam cupiditate ipsa officia explicabo vero facere, necessitatibus numquam provident voluptatibus labore at repellat hic?</h4>
     <img src="" alt="">
   </div>
-
+</div>
   <!-- What InterviewEQ is and How It Works -->
-  <div class="whatItIs">
-    <h2>Secton Two Header Text</h2>
-      <div class="problem">
-        <h3 class="whatHeaders">The Problem</h3>
-          <img src="" class ="icons" alt="">
-          <p>The PROBLEMS and PAIN POINTS</p>
-      </div>
-      <div class="theFix"></div>
-        <h3 class="whatHeaders">The Solution</h3>
-          <img src="" class="icons" alt="">
-          <p>InterviewEQ is THE SOLUTION to the PROBLEM</p>
-      </div>
-      <div class="howItWorks"></div>
-        <h3 class="whatHeaders">The Solution</h3>
-          <img src="" class="icons" alt="">
-          <p>HOW IEQ WORKS</p>
-      </div>
+  <div class="whatItIs container">
+    <h3 class="infoTitle">What is InterviewEQ?</h3>
+      <div class="problem col s4">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator imageSize" src="./assets/images/problemImage.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">The Problem<i class="material-icons right">⋮</i></span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">The PROBLEMS and PAIN POINTS<i class="material-icons right">&#x24E7;</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      <div class="theFix col s4">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator imageSize" src="./assets/images/solutionImage.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">The Solution<i class="material-icons right">⋮</i></span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">InterviewEQ is THE SOLUTION to the PROBLEM<i class="material-icons right">&#x24E7;</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      <div class="howItWorks col s4">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator imageSize" src="./assets/images/worksImage.png">
+          </div>
+          <div class="card-content" id="contentSize">
+            <span class="card-title activator grey-text text-darken-4">How it works<i class="material-icons right">⋮</i></span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">HOW IEQ WORKS<i class="material-icons right">&#x24E7;</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
   </div>
 
   <!-- Functional Area -->
-  <div class="functionalArea">
-    <h2>Instructions Header</h2>
-      <h4>Instructions for how to operate InterviewEQ go here.</h4>
+  <div class="functionalArea funcBackground">
+    <div class="container">
+    <h3>Instructions Header</h3>
+      <h5>Instructions for how to operate InterviewEQ go here.</h5>
       <button id="startBtn">Start</button>
       <button id="pauseBtn">Pause</button>
       <button id="resetBtn">Reset</button>
-      <button id="submitBtn">Submit</button>
+      <button id="submitBtn" class="disabled">Submit</button>
   </div>
-
+</div>
   <!-- Results Area -->
-  <div class="resultsArea">
-    <h2>Results Header</h2>
-    <h4>How to interpret results description goes here.</h4>
-    <div id="resultsDiv">
-
-    </div>
+  <div class="resultsArea container">
+    <h3 class="resultTitle">Results</h3>
+    <h5>How to interpret results description goes here.</h5>
+      <div id="resultsDiv">
+        <!-- class="hide" -->
+        <p class="resultLabel">Happy</p>
+        <div class="progress result1">
+          <div class="determinate" id="happyBar" style="width: 75%"></div>
+        </div>
+        <p class="resultLabel">Angry</p>
+        <div class="progress result2">
+          <div class="determinate" id="angryBar" style="width: 15%"></div>
+        </div>
+        <p class="resultLabel">Excited</p>
+        <div class="progress result3">
+          <div class="determinate" id="excitedBar" style="width: 10%"></div>
+        </div>
+        <p class="resultLabel">Sad</p>
+        <div class="progress result4">
+          <div class="determinate" id="sadBar" style="width: 10%"></div>
+        </div>
+        <p class="resultLabel">Fear</p>
+        <div class="progress result5">
+          <div class="determinate" id="fearBar" style="width: 10%"></div>
+        </div>
+        <p class="resultLabel">Bored</p>
+        <div class="progress result6">
+          <div class="determinate" id="boredBar" style="width: 10%"></div>
+        </div>
+      </div>
   </div>
 
   <!-- footer -->
   <footer>
-
+    <div class="footer-copyright">
+      <div class="container">
+      © InterviewEQ
+      </div>
+    </div>
   </footer>
-
+  
   <!-- script area -->
   <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
     crossorigin="anonymous"></script>
@@ -69,6 +140,5 @@
 
   <script src="./assets/javascript/textEngine.js"></script>
   <script src="./assets/javascript/speechEngine.js"></script>
-  <script src="./assets/javascript/demoScript.js"></script>
 </body>
 </html>
