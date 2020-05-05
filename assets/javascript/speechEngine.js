@@ -1,9 +1,10 @@
 // Speech to text code goes here
 
 //Create global variables
-let resultString = '' //will be passed to textAnalyze function in the textEngine file
+let resultString = '' //will be passed to textAnalyzer function in the textEngine file
 let newResult
 let i = 0
+let isPaused = false
 
 //enables ability for mobile and desktop // feeds objects to Chrome
 let SpeechRecognition = webkitSpeechRecognition
@@ -41,7 +42,8 @@ $('#startBtn').click( ()=>{
 //make an event listener that listens for stopBtn
 $('#pauseBtn').click( () => {
   //stop the speech recognition
-  recognition.stop()
+  isPaused? recognition.start() : recognition.stop()
+  isPaused? isPaused = false : isPaused = true
 }
 )
 
@@ -80,7 +82,7 @@ recognition.onresult = function (event) {
   newResult = event.results[i][0].transcript;
   i++
   console.log(`New result: ${newResult}`)
-  resultString = resultString+newResult
+  resultString += newResult
   console.log('Confidence: ' + event.results[0][0].confidence);
   console.log('New overall results: ' + resultString)
 }
