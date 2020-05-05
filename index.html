@@ -44,7 +44,7 @@
       <div class="problem col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator imageSize" src="./assets/images/problemImage.png">
+            <img class="activator imageSize" src="./assets/images/problemImage.png" alt="pencil on paper">
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">The Problem<i class="material-icons right">⋮</i></span>
@@ -59,7 +59,7 @@
       <div class="theFix col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator imageSize" src="./assets/images/solutionImage.png">
+            <img class="activator imageSize" src="./assets/images/solutionImage.png" alt="light bulb puzzle">
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">The Solution<i class="material-icons right">⋮</i></span>
@@ -74,15 +74,19 @@
       <div class="howItWorks col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator imageSize" src="./assets/images/worksImage.png">
+            <img class="activator imageSize" src="./assets/images/worksImage.png" alt="box containing gear, light bulb, and heart">
           </div>
           <div class="card-content" id="contentSize">
             <span class="card-title activator grey-text text-darken-4">How It Works<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>HOW IEQ WORKS</span>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>How It Works</span>
             <br>
-            <p class="cardText">This application works by using speech-to-text recognition software to record your mock interview then run an emotion analysis.</p>
+            <p class="cardText">
+              InterviewEQ works in a three-step process:Record the audio of your mock interview directly through this page. 
+              The app uses speech-to-text conversion to render the audio as a text string.
+              That text string is run through an emotion analysis engine that renders a display of prominent emotions present in the recording.
+              </p>
           </div>
         </div>
       </div>
@@ -92,11 +96,10 @@
   <!-- Functional Area -->
   <div class="functionalArea funcBackground">
     <div class="container">
-    <h3 class="funcTitle">Instructions Header</h3>
-      <h5>Instructions for how to operate InterviewEQ go here.</h5>
-      
+    <h3 class="funcTitle">Let's Get Started</h3>
+      <h5>Click Start to begin recording. Click Reset to stop without submitting. Click Submit to stop and submit for results.</h5>
       <button id="startBtn" class="btn">Start</button>
-      <button id="pauseBtn" class="btn">Pause</button>
+      <button id="pauseBtn" class="btn hide">Pause</button>
       <button id="resetBtn" class="btn">Reset</button>
       <button id="submitBtn" class="disabled btn">Submit</button>
       <div class="progress hide" id="progressBar">
@@ -107,7 +110,7 @@
   <!-- Results Area -->
   <div class="resultsArea container">
     <h3 class="resultTitle">Results</h3>
-    <h5>How to interpret results description goes here.</h5>
+    <h5>Your primary emotions are displayed below.</h5>
     <div class="preloader-wrapper big active hide" id="resultsSwirl">
       <div class="spinner-layer spinner-blue-only">
         <div class="circle-clipper left">

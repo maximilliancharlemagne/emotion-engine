@@ -50,6 +50,7 @@
 }
 .btn {
     background-color: #0facd4;
+    margin-top: 10px;
 }
 .btn:hover {
     background-color: #0288d1;
