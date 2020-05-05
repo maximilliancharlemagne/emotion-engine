@@ -10,8 +10,10 @@
 .heroBackground {
     color: white;
     padding: 20px;
-    background: linear-gradient(#0facd4, #447ee3, #9c31fe)
+    background: linear-gradient(#0facd4, #447ee3, #45087e)
 }
+
+/*    background: linear-gradient(#0facd4, #447ee3, #9c31fe)*/
 .cardText {
     text-align: left;
 }
