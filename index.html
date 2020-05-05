@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>InterviewEQ</title>
 </head>
 <body>
   <!-- hamburger NavBar -->
-  <nav>
+  <!-- <nav>
     <div class="nav-wrapper">
       <a href="#resultsDiv" class="brand-logo">Logo</a>
       <a href="#resultsDiv" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -26,19 +27,21 @@
     <li><a href="collapsible.html">Javascript</a></li>
     <li><a href="mobile.html">Mobile</a></li>
   </ul>
-  </nav>
+  </nav> -->
   <!-- Hero Area -->
   <div class="hero heroBackground">
     <div class="container">
     <h1 class="appName">InterviewEQ</h1>
-    <h4 class="tagLine">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus harum et eligendi nulla velit non, veniam cupiditate ipsa officia explicabo vero facere, necessitatibus numquam provident voluptatibus labore at repellat hic?</h4>
+    <h5 class="tagLine">Because interviews are about more than just your technical ability. 
+      <br>Analyze your emotions, land the job.</h5>
     <img src="" alt="">
   </div>
 </div>
   <!-- What InterviewEQ is and How It Works -->
   <div class="whatItIs container">
+    <div class="row">
     <h3 class="infoTitle">What is InterviewEQ?</h3>
-      <div class="problem col s4">
+      <div class="problem col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator imageSize" src="./assets/images/problemImage.png">
@@ -47,11 +50,13 @@
             <span class="card-title activator grey-text text-darken-4">The Problem<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">The PROBLEMS and PAIN POINTS<i class="material-icons right">&#x24E7;</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>The PROBLEMS and PAIN POINTS</span>
+            <br>
+            <p class="cardText">Here is some more information about this product that is only revealed once clicked on.</p>
           </div>
-        </div>
-      <div class="theFix col s4">
+      </div>
+    </div>
+      <div class="theFix col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator imageSize" src="./assets/images/solutionImage.png">
@@ -60,11 +65,13 @@
             <span class="card-title activator grey-text text-darken-4">The Solution<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">InterviewEQ is THE SOLUTION to the PROBLEM<i class="material-icons right">&#x24E7;</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>InterviewEQ is THE SOLUTION to the PROBLEM</span>
+            <br>
+            <p class="cardText">Here is some more information about this product that is only revealed once clicked on.</p>
           </div>
         </div>
-      <div class="howItWorks col s4">
+      </div>
+      <div class="howItWorks col s12 m4 l4">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator imageSize" src="./assets/images/worksImage.png">
@@ -73,21 +80,28 @@
             <span class="card-title activator grey-text text-darken-4">How it works<i class="material-icons right">⋮</i></span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">HOW IEQ WORKS<i class="material-icons right">&#x24E7;</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">&#x24E7;</i>HOW IEQ WORKS</span>
+            <br>
+            <p class="cardText">Here is some more information about this product that is only revealed once clicked on.</p>
           </div>
         </div>
+      </div>
+    </div>
   </div>
 
   <!-- Functional Area -->
   <div class="functionalArea funcBackground">
     <div class="container">
-    <h3>Instructions Header</h3>
+    <h3 class="funcTitle">Instructions Header</h3>
       <h5>Instructions for how to operate InterviewEQ go here.</h5>
-      <button id="startBtn">Start</button>
-      <button id="pauseBtn">Pause</button>
-      <button id="resetBtn">Reset</button>
-      <button id="submitBtn" class="disabled">Submit</button>
+      
+      <button id="startBtn" class="btn">Start</button>
+      <button id="pauseBtn" class="btn">Pause</button>
+      <button id="resetBtn" class="btn">Reset</button>
+      <button id="submitBtn" class="disabled btn">Submit</button>
+      <div class="progress hide" id="progressBar">
+        <div class="indeterminate"></div>
+      </div>
   </div>
 </div>
   <!-- Results Area -->

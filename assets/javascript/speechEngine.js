@@ -31,6 +31,7 @@ recognition.maxAlternatives = 1;
 $('#startBtn').click( ()=>{
   //start the speech recognition
   recognition.start();
+  $('#progressBar').removeClass('hide')
   console.log('Starting recognition')
   resultString = ''
 }
@@ -42,6 +43,7 @@ $('#startBtn').click( ()=>{
 $('#pauseBtn').click( () => {
   //stop the speech recognition
   recognition.stop()
+  $('#progressBar').addClass('hide')
 }
 )
 
@@ -53,6 +55,7 @@ $('#resetBtn').click(() => {
   //clear resultString
   resultString = ''
   $('#submitBtn').addClass('disabled')
+  $('#progressBar').addClass('hide')
   i = 0
 }
 )
@@ -68,6 +71,8 @@ $('#submitBtn').click(() => {
     textAnalyzer(resultString)
     resultString = ''
     i = 0
+    $('#submitBtn').addClass('disabled')
+    $('#progressBar').addClass('hide')
   }
   }
   
