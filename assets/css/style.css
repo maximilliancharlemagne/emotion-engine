@@ -10,7 +10,7 @@
 .heroBackground {
     color: white;
     padding: 20px;
-    background: linear-gradient(#0facd4, #447ee3, #45087e)
+    background: linear-gradient(#0facd4, #447ee3, #45087e);
 }
 
 /*    background: linear-gradient(#0facd4, #447ee3, #9c31fe)*/
@@ -18,8 +18,9 @@
     text-align: left;
 }
 .funcBackground {
-    background-color: lightgrey;
+    background: linear-gradient(#0facd4, #447ee3, #45087e);
     padding: 40px;
+    color: white;
 }
 .funcTitle {
     margin: 0px;
@@ -46,6 +47,13 @@
 }
 .infoTitle {
     color: darkblue;
+}
+.btn {
+    background-color: #0facd4;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: #0288d1;
 }
 .resultLabel {
     text-align: left;
