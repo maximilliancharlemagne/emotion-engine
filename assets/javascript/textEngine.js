@@ -16,9 +16,9 @@ function textAnalyzer(stringToAnalyze){
     type: "POST",
     url: 'https://apis.paralleldots.com/v5/emotion',
     data: dataObject, 
-    success: function (data) {
-      console.log(data);
-      textDisplayer(data)
+    success: (data) => {
+      console.log(data.emotion);
+      textDisplayer(data.emotion)
       //process the JSON data etc
     }
   })
@@ -28,7 +28,7 @@ function textDisplayer(anEmotionObject){
   $('#happyBar').attr('style',`width: ${Math.floor(anEmotionObject.happy*100)}%`)
   $('#angryBar').attr('style', `width: ${Math.floor(anEmotionObject.angry * 100)}%`)
   $('#excitedBar').attr('style', `width: ${Math.floor(anEmotionObject.excited * 100)}%`)
-  $('#sadBar').attr('style',`width: ${Math.floor(anEmotionObject.sad*100)}%`)
-  $('#fearBar').attr('style',`width: ${Math.floor(anEmotionObject.fear*100)}%`)
-  $('#boredBar').attr('style',`width: ${Math.floor(anEmotionObject.indifferent*100)}%`)
+  $('#sadBar').attr('style', `width: ${Math.floor(anEmotionObject.sad*100)}%`)
+  $('#fearBar').attr('style', `width: ${Math.floor(anEmotionObject.fear*100)}%`)
+  $('#boredBar').attr('style', `width: ${Math.floor(anEmotionObject.indifferent*100)}%`)
 }
