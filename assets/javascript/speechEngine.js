@@ -73,6 +73,8 @@ $('#submitBtn').click(() => {
     i = 0
     $('#submitBtn').addClass('disabled')
     $('#progressBar').addClass('hide')
+    $('#resultsSwirl').removeClass('hide')
+    $('#resultsDiv').addClass('hide')
   }
   }
   

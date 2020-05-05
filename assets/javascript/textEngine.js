@@ -25,6 +25,8 @@ function textAnalyzer(stringToAnalyze){
 }
 
 function textDisplayer(anEmotionObject){
+  $('#resultsSwirl').addClass('hide')
+  $('#resultsDiv').removeClass('hide')
   $('#happyBar').attr('style',`width: ${Math.floor(anEmotionObject.happy*100)}%`)
   $('#angryBar').attr('style', `width: ${Math.floor(anEmotionObject.angry * 100)}%`)
   $('#excitedBar').attr('style', `width: ${Math.floor(anEmotionObject.excited * 100)}%`)
