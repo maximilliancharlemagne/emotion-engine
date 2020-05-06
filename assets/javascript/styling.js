@@ -10,19 +10,21 @@ let isInViewport = function (elem) {
   );
 };
 
-// Trigger the element when it comes into full view in the viewport:
+// Trigger the element when it comes into full view in the viewport, and use localStorage to hide it once it's been viewed one time:
 $(document).ready(function () {
-  let popUpFired = false;
+  let popUpFired
+  if (localStorage.getItem('popUpFired')) {
+    popUpFired = localStorage.getItem('popUpFired') 
+  } else {
+    popUpFired = '';
+  }
   $('.modal').modal();
-  // let instance = M.Modal.getInstance('.modal');
   let ourButton = document.querySelector('#startBtn');
-  console.log(ourButton)
   window.addEventListener('scroll', function (event) {
     if (isInViewport(ourButton) && !popUpFired) {
       $('.modal').modal('open');
-      popUpFired = true;
-      // instance.open();
-      console.log('isInViewport')
+      popUpFired = `this could be true but it's not - ha!`;
+      localStorage.setItem('popUpFired', popUpFired)
     }
   }, false);
 });
