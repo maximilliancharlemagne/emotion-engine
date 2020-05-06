@@ -1,41 +1,66 @@
 .appName {
     margin-top: 0px;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 70px;
-    text-shadow: 2px 2px 8px darkblue;
+    font-size: 90px;
+    text-shadow: 2px 2px 8px rgb(7, 55, 179);
     /* text-shadow: 2px 2px 8px rgba(red, green, blue, alpha); */
 }
+
 @media screen and (max-width: 600px) {
-    h1.appName{
-           font-size: 16vw;
+    h1.appName {
+        font-size: 16vw;
     }
 }
+
 .heroBackground {
     color: white;
     padding: 20px;
+    padding-bottom: 0;
     background: linear-gradient(#0facd4, #447ee3, #45087e);
+}
+@media screen and (max-width: 600px) {
+    .heroBackground {
+        padding-bottom: 20px;
+    }
+}
+
+.heroImage {
+    max-width: 75%;
+    margin-bottom: -2px;
+}
+
+@media screen and (max-width: 600px) {
+    .heroImage {
+        display: none;
+    }
 }
 
 /*    background: linear-gradient(#0facd4, #447ee3, #9c31fe)*/
+
 .cardText {
     text-align: left;
 }
+
 .funcBackground {
     background: linear-gradient(#0facd4, #447ee3, #45087e);
     padding: 40px;
     color: white;
 }
+
 .funcTitle {
     margin: 0px;
 }
+
 #progressBar {
     margin-top: 20px;
 }
+
 .container {
     text-align: center;
 }
+
 .imageSize {
     max-width: 120px;
     display: block;
@@ -44,25 +69,32 @@
     width: 50%;
     padding: 10px;
 }
+
 .card-content {
     padding: 10px !important;
 }
+
 .card-title {
     font-weight: 400 !important;
 }
+
 .infoTitle {
     color: darkblue;
 }
+
 .btn {
     background-color: #0facd4;
     margin-top: 10px;
 }
+
 .btn:hover {
     background-color: #0288d1;
 }
+
 .resultLabel {
     text-align: left;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
 }
