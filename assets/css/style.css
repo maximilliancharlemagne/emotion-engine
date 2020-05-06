@@ -3,9 +3,14 @@
     font-family:'Roboto', sans-serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 75px;
+    font-size: 70px;
     text-shadow: 2px 2px 8px darkblue;
     /* text-shadow: 2px 2px 8px rgba(red, green, blue, alpha); */
+}
+@media screen and (max-width: 600px) {
+    h1.appName{
+           font-size: 16vw;
+    }
 }
 .heroBackground {
     color: white;
