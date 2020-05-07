@@ -3,8 +3,11 @@
 
 # Team
 Amanda Cerjak: https://github.com/acerjak
+
 Ian Kirby: https://github.com/vertjames
+
 Kasey Agapinan: https://github.com/agapinank
+
 Maxwell Roberts: https://github.com/maximilliancharlemagne
 
 # Tech Overview
