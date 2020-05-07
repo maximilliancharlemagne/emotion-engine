@@ -1,12 +1,13 @@
 .appName {
     margin-top: 0px;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-style: italic;
     font-size: 75px;
     text-shadow: 2px 2px 8px darkblue;
     /* text-shadow: 2px 2px 8px rgba(red, green, blue, alpha); */
 }
+
 .heroBackground {
     color: white;
     padding: 20px;
@@ -14,23 +15,29 @@
 }
 
 /*    background: linear-gradient(#0facd4, #447ee3, #9c31fe)*/
+
 .cardText {
     text-align: left;
 }
+
 .funcBackground {
     background: linear-gradient(#0facd4, #447ee3, #45087e);
     padding: 40px;
     color: white;
 }
+
 .funcTitle {
     margin: 0px;
 }
+
 #progressBar {
     margin-top: 20px;
 }
+
 .container {
     text-align: center;
 }
+
 .imageSize {
     max-width: 120px;
     display: block;
@@ -39,25 +46,36 @@
     width: 50%;
     padding: 10px;
 }
+
 .card-content {
     padding: 10px !important;
 }
+
 .card-title {
     font-weight: 400 !important;
 }
+
 .infoTitle {
     color: darkblue;
 }
+
 .btn {
     background-color: #0facd4;
     margin-top: 10px;
 }
+
 .btn:hover {
     background-color: #0288d1;
 }
+
 .resultLabel {
     text-align: left;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    padding: 20px;
 }
