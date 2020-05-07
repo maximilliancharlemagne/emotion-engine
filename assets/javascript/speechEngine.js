@@ -56,6 +56,7 @@ $('#resetBtn').click(() => {
   resultString = ''
   $('#submitBtn').addClass('disabled')
   $('#progressBar').addClass('hide')
+  $('#detailedResults').addClass('hide')
   i = 0
 }
 )
