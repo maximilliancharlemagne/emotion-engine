@@ -95,7 +95,7 @@ recognition.onresult = function (event) {
 
 //check out documentation on why burnt wheat was not flagged
 recognition.onnomatch = function (event) {
-  console.log('I``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````` didnt recognise that word.')
+  console.log('I didnt recognise that word.')
 }
 //handles cases where there is an actual error with the recognition successfully
 recognition.onerror = function (event) {
