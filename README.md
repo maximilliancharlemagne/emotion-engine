@@ -1,6 +1,8 @@
 # InterviewEQ
 [InterviewEQ](https://maximilliancharlemagne.github.io/emotion-engine/) is an app designed specifically for developers who want to build their soft skills to get jobs. Technically qualified coders can still fail to connect with the interviewer. InterviewEQ exists to help solve that problem.
 
+# Badges
+![primary language badge](https://img.shields.io/github/languages/top/maximilliancharlemagne/emotion-engine)
 # Team
 Amanda Cerjak: https://github.com/acerjak
 
